@@ -11,13 +11,9 @@ const initialState: ThemeState = {
 export const ThemeSlice = createSlice({
     name: "ThemeInfo",
     initialState: initialState,
-    reducers: {
-        setTheme: (state, action: PayloadAction<"dark" | "light">) => {
-            state.theme = action.payload;
-        },
-    },
+    reducers: {},
 });
 
-export const { setTheme } = ThemeSlice.actions;
+export const {} = ThemeSlice.actions;
 
 export default ThemeSlice.reducer;

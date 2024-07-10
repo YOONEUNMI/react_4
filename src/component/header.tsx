@@ -8,12 +8,6 @@ export const Header = (): JSX.Element => {
     const { pathname } = useLocation();
 
     // redux selector로 값 받아오기
-    const { userInfo } = useSelector(
-        (state: RootState) =>
-            ({
-                userInfo: state.userInfo,
-            } as { userInfo: UserState })
-    );
 
     useEffect(() => {
         // pathName 변경 할때마다  console.log
@@ -23,7 +17,8 @@ export const Header = (): JSX.Element => {
     return (
         <div className="header">
             <div>{pathname !== "/" && <Link to="/">Home으로 돌아가기</Link>}</div>
-            {userInfo.userName && <div>접속자 이름 : {userInfo.userName}</div>}
+            <div>접속자 이름 :</div>
+            {/* {userInfo.userName && <div>접속자 이름 : {userInfo.userName}</div>} */}
         </div>
     );
 };
